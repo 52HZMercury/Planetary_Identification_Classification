@@ -1,0 +1,10 @@
+  0%|          | 0/171 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "D:\Program\Planetary_Identification_Classification\planetTrain\transferLearing.py", line 225, in <module>
+    df_train_log = df_train_log.append(log_train, ignore_index=True)
+                   ^^^^^^^^^^^^^^^^^^^
+  File "D:\Program\Planetary_Identification_Classification\venv\Lib\site-packages\pandas\core\generic.py", line 6296, in __getattr__
+    return object.__getattribute__(self, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataFrame' object has no attribute 'append'. Did you mean: '_append'?
+Epoch 1/30

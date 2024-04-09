@@ -1,0 +1,47 @@
+{
+    "os": "Windows-11-10.0.22631-SP0",
+    "python": "3.12.2",
+    "heartbeatAt": "2024-03-21T07:31:06.069416",
+    "startedAt": "2024-03-21T07:31:03.811682",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "D:\\Program\\Planetary_Identification_Classification\\planetTrain\\transferLearing.py",
+    "codePathLocal": "transferLearing.py",
+    "codePath": "transferLearing.py",
+    "host": "DESKTOP-4P5OOSQ",
+    "username": "William",
+    "executable": "D:\\Program\\Planetary_Identification_Classification\\venv\\Scripts\\python.exe",
+    "cpu_count": 14,
+    "cpu_count_logical": 20,
+    "cpu_freq": {
+        "current": 3500.0,
+        "min": 0.0,
+        "max": 3500.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3500.0,
+            "min": 0.0,
+            "max": 3500.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 300.1009712219238,
+            "used": 9.993545532226562
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 4060 Ti",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 4060 Ti",
+            "memory_total": 8585740288
+        }
+    ],
+    "memory": {
+        "total": 31.817363739013672
+    }
+}
