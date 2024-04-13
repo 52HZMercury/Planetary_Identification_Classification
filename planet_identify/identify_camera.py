@@ -1,17 +1,9 @@
-import os
 
 import numpy as np
-import pandas as pd
-
-import cv2 # opencv-python
 from PIL import Image, ImageFont, ImageDraw
-from tqdm import tqdm # 进度条
-
-import matplotlib.pyplot as plt
 
 import torch
 import torch.nn.functional as F
-from torchvision import models
 
 # 有 GPU 就用 GPU，没有就用 CPU
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
@@ -118,7 +110,6 @@ def process_frame(img):
 
 # 调用摄像头逐帧实时处理模板
 # 不需修改任何代码，只需修改process_frame函数即可
-# 同济子豪兄 2021-7-8
 
 # 导入opencv-python
 import cv2

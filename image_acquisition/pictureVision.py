@@ -1,15 +1,11 @@
 import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
 from mpl_toolkits.axes_grid1 import ImageGrid
-#%matplotlib inline
 
 import numpy as np
 import math
 import os
 
 import cv2
-
-from tqdm import tqdm
 
 folder_path = 'dataset_split/train/Jupiter'
 
@@ -40,3 +36,5 @@ for ax, im in zip(grid, images):
 
 plt.tight_layout()
 plt.show()
+# 保存为高清的 pdf 文件
+# plt.savefig('子图.pdf', dpi=120, bbox_inches='tight')
