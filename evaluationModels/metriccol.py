@@ -5,9 +5,9 @@ import matplotlib.pyplot as plt
 df = pd.read_csv('各类别准确率评估指标.csv')
 
 # feature = 'precision'
-feature = 'recall'
+# feature = 'recall'
 # feature = 'f1-score'
-# feature = 'accuracy'
+feature = 'accuracy'
 # feature = 'AP'
 # feature = 'AUC'
 # 绘制柱状图
