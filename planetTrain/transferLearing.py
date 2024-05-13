@@ -6,12 +6,7 @@ import pandas as pd
 import numpy as np
 
 import torch
-import torchvision
 import torch.nn as nn
-import torch.nn.functional as F
-
-import matplotlib.pyplot as plt
-
 # 忽略烦人的红色提示
 import warnings
 warnings.filterwarnings("ignore")

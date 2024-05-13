@@ -34,8 +34,8 @@ test_transform = transforms.Compose([transforms.Resize(256),
 from PIL import Image
 
 # img_path = 'test_img/singlePicture/moon.jpg'
-img_path = 'test_img/singlePicture/jupiter.jpg'
-# img_path = 'test_img/singlePicture/comet.jpeg'
+# img_path = 'test_img/singlePicture/jupiter.jpg'
+img_path = 'test_img/singlePicture/comet.jpeg'
 # img_path = 'test_img/singlePicture/saturn.jpeg'
 
 img_pil = Image.open(img_path)
