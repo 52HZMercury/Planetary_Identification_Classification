@@ -12,18 +12,20 @@ print(classes)
 
 df = pd.read_csv('测试集预测结果.csv')
 
-specific_class = '彗星'
+specific_class = '火星'
 # 二分类标注
 y_test = (df['标注类别名称'] == specific_class)
 
 # 二分类置信度
-y_score = df['彗星-预测置信度']
+y_score = df['火星-预测置信度']
 
 from sklearn.metrics import roc_curve, auc
 fpr, tpr, threshold = roc_curve(y_test, y_score)
 plt.figure(figsize=(12, 8))
+
 plt.plot(fpr, tpr, linewidth=5, label=specific_class)
-plt.plot([0, 1], [0, 1],ls="--", c='.3', linewidth=3, label='随机模型')
+# plt.plot([0, 1], [0, 1],ls="--", c='.3', linewidth=3, label='随机模型')
+
 plt.xlim([-0.01, 1.0])
 plt.ylim([0.0, 1.01])
 plt.rcParams['font.size'] = 22

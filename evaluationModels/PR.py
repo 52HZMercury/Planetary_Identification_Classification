@@ -11,13 +11,16 @@ print(classes)
 df = pd.read_csv('测试集预测结果.csv')
 
 #绘制某一类别的PR曲线
-specific_class = '彗星'
+specific_class = '火星'
 # 二分类标注
 y_test = (df['标注类别名称'] == specific_class)
 # 二分类预测置信度
-y_score = df['彗星-预测置信度']
+y_score = df['火星-预测置信度']
+
+
 from sklearn.metrics import precision_recall_curve
 from sklearn.metrics import average_precision_score
+
 precision, recall, thresholds = precision_recall_curve(y_test, y_score)
 AP = average_precision_score(y_test, y_score, average='weighted')
 
@@ -27,9 +30,9 @@ plt.plot(recall, precision, linewidth=5, label=specific_class)
 
 # 随机二分类模型
 # 阈值小，所有样本都被预测为正类，recall为1，precision为正样本百分比
-# 阈值大，所有样本都被预测为负类，recall为0，precision波动较大
-plt.plot([0, 0], [0, 1], ls="--", c='.3', linewidth=3, label='随机模型')
-plt.plot([0, 1], [0.5, sum(y_test==1)/len(df)], ls="--", c='.3', linewidth=3)
+# # 阈值大，所有样本都被预测为负类，recall为0，precision波动较大
+# plt.plot([0, 0], [0, 1], ls="--", c='.3', linewidth=3, label='随机模型')
+# plt.plot([0, 1], [0.5, sum(y_test==1)/len(df)], ls="--", c='.3', linewidth=3)
 
 plt.xlim([-0.01, 1.0])
 plt.ylim([0.0, 1.01])

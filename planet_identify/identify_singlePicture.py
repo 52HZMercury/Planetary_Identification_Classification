@@ -35,8 +35,8 @@ from PIL import Image
 
 # img_path = 'test_img/singlePicture/moon.jpg'
 # img_path = 'test_img/singlePicture/jupiter.jpg'
-img_path = 'test_img/singlePicture/comet.jpeg'
-# img_path = 'test_img/singlePicture/saturn.jpeg'
+# img_path = 'test_img/singlePicture/comet.jpeg'
+img_path = 'test_img/singlePicture/saturn.jpeg'
 
 img_pil = Image.open(img_path)
 
@@ -63,7 +63,7 @@ plt.xlabel('类别', fontsize=20)
 plt.ylabel('置信度', fontsize=20)
 plt.show()
 
-n = 10
+n = 5
 top_n = torch.topk(pred_softmax, n) # 取置信度最大的 n 个结果
 pred_ids = top_n[1].cpu().detach().numpy().squeeze() # 解析出类别
 confs = top_n[0].cpu().detach().numpy().squeeze() # 解析出置信度

@@ -31,8 +31,8 @@ def cnf_matrix_plotter(cm, classes, cmap=plt.cm.Blues):
     tick_marks = np.arange(len(classes))
 
     plt.title('混淆矩阵', fontsize=30)
-    plt.xlabel('预测类别', fontsize=25, c='r')
-    plt.ylabel('真实类别', fontsize=25, c='r')
+    plt.xlabel('预测类别Prediction', fontsize=20, c='black')
+    plt.ylabel('真实类别Reference', fontsize=20, c='black')
     plt.tick_params(labelsize=16)  # 设置类别文字大小
     plt.xticks(tick_marks, classes, rotation=90)  # 横轴文字旋转
     plt.yticks(tick_marks, classes)
