@@ -11,11 +11,11 @@ print(classes)
 df = pd.read_csv('测试集预测结果.csv')
 
 #绘制某一类别的PR曲线
-specific_class = '火星'
+specific_class = '慧星'
 # 二分类标注
 y_test = (df['标注类别名称'] == specific_class)
 # 二分类预测置信度
-y_score = df['火星-预测置信度']
+y_score = df['慧星-预测置信度']
 
 
 from sklearn.metrics import precision_recall_curve

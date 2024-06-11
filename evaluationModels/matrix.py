@@ -2,9 +2,6 @@ import matplotlib
 matplotlib.rc("font",family='SimHei') # 中文字体
 import pandas as pd
 import numpy as np
-from tqdm import tqdm
-
-import math
 import cv2
 
 import matplotlib.pyplot as plt

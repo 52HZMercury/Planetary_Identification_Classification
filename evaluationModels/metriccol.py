@@ -10,6 +10,7 @@ df = pd.read_csv('各类别准确率评估指标.csv')
 feature = 'accuracy'
 # feature = 'AP'
 # feature = 'AUC'
+
 # 绘制柱状图
 df_plot = df.sort_values(by=feature, ascending=False)
 

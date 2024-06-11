@@ -93,12 +93,21 @@ test_loader = DataLoader(test_dataset,
                          num_workers=0
                         )
 
-'''
-炼丹，调参
-'''
+# 选择一：只微调训练模型最后一层（全连接分类层）
 model = models.resnet18(pretrained=True)
 model.fc = nn.Linear(model.fc.in_features, n_class)
-optimizer = optim.Adam(model.parameters())
+# 只微调训练最后一层全连接层的参数，其它层冻结
+optimizer = optim.Adam(model.fc.parameters())
+
+# 选择二：微调训练所有层
+# model = models.resnet18(pretrained=True) # 载入预训练模型
+# model.fc = nn.Linear(model.fc.in_features, n_class)
+# optimizer = optim.Adam(model.parameters())
+
+# 选择三：随机初始化模型全部权重，从头训练所有层
+# model = models.resnet18(pretrained=False) # 只载入模型结构，不载入预训练权重参数
+# model.fc = nn.Linear(model.fc.in_features, n_class)
+# optimizer = optim.Adam(model.parameters())
 
 model = model.to(device)
 # 交叉熵损失函数

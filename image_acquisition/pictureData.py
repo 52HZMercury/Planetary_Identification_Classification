@@ -1,7 +1,5 @@
-import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-#%matplotlib inline
 
 # # windows操作系统
 plt.rcParams['font.sans-serif']=['SimHei']  # 用来正常显示中文标签
